@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Generate Green Square
-      uses: dan-mba/green-box-count@master
+      uses: dan-mba/green-box-count@main
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
     - name: Find
