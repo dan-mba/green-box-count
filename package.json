@@ -1,0 +1,33 @@
+{
+  "name": "green-box-count",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && ncc build build/index.js -o dist --source-map",
+    "test": "tsc && node ./build/test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dan-mba/green-box-count.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dan-mba/green-box-count/issues"
+  },
+  "homepage": "https://github.com/dan-mba/green-box-count#readme",
+  "dependencies": {
+    "@actions/core": "^1.3.0",
+    "@actions/github": "^5.0.0",
+    "@vercel/ncc": "^0.28.6"
+  },
+  "devDependencies": {
+    "@tsconfig/node12": "^1.0.8",
+    "@types/node": "^15.12.2",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.28.0",
+    "typescript": "^4.3.2"
+  }
+}

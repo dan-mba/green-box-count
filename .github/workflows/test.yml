@@ -1,0 +1,18 @@
+name: Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-action:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Generate Green Square
+      uses: dan-mba/green-box-count@master
+      with:
+        github-token: ${{secrets.GITHUB_TOKEN}}
+    - name: Find
+      run: |
+        cat green.svg
+   

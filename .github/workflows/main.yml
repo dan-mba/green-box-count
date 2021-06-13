@@ -1,0 +1,35 @@
+name: Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+    paths:
+      - "**.js"
+      - "**.ts"
+      - "**.json"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Node.js
+      uses: actions/setup-node@v2.1.5
+      with:
+        node-version: '12.x'
+    - name: Build 
+      run: |
+        rm -rf dist
+        npm ci
+        npm run build
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add -A dist
+        git diff-index --quiet --cached HEAD || git commit -m "Build Action"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
