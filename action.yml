@@ -4,6 +4,9 @@ inputs:
   github-token:
     description: 'GitHub Secret Token'
     required: true
+  size:
+    description: 'SVG Height & Width in pixels'
+    required: false
 
 runs:
   using: 'node12'
