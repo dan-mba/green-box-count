@@ -40,9 +40,9 @@ const svg_1 = __importDefault(__nccwpck_require__(649));
         throw new Error('MissingParmErr');
     }
     const myLogin = github.context.actor;
-    const count = await calendar_1.default(myLogin, myToken);
+    const count = await (0, calendar_1.default)(myLogin, myToken);
     const size = core.getInput('size');
-    svg_1.default(size ? Number(size) : 200, count);
+    (0, svg_1.default)(size ? Number(size) : 200, count);
 })();
 
 
