@@ -58,6 +58,9 @@ async function getSquaresCount(login: string, myToken: string) {
 
     // Don't end streak based on current day, but add it if contribution made
     let count = days.slice(1).findIndex(d => d.count === 0);
+    if (count === -1) {
+      count = days.length-1;
+    }
     if (days[0].count > 0) count++;
     return count;
   } catch(e) {
