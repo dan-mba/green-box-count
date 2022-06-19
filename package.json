@@ -24,7 +24,7 @@
     "@vercel/ncc": "^0.34.0"
   },
   "devDependencies": {
-    "@tsconfig/node12": "^1.0.11",
+    "@tsconfig/node16": "^1.0.3",
     "@types/node": "^18.0.0",
     "dotenv": "^16.0.1",
     "eslint": "^8.17.0",
