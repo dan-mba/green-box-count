@@ -7,7 +7,7 @@ jobs:
   test-action:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Generate Green Square
       uses: dan-mba/green-box-count@main
       with:
