@@ -20,7 +20,7 @@
   "homepage": "https://github.com/dan-mba/green-box-count#readme",
   "dependencies": {
     "@actions/core": "^1.10.1",
-    "@actions/github": "^5.1.1",
+    "@actions/github": "^6.0.0",
     "@vercel/ncc": "^0.38.0"
   },
   "devDependencies": {
